@@ -4,9 +4,3 @@
 <ul>
   <%= render @games %>
 </ul>
-
-<ul>
-  <% @games.each do |game| %>
-    <%= render partial: 'games/game', locals: { game: game } %>
-  <% end %>
-</ul>
