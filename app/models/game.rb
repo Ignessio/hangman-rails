@@ -47,7 +47,7 @@ class Game < ApplicationRecord
   end
 
   def play!(letter)
-    unless over? && guesses.include?(normalize_letter(letter))
+    unless over? || guesses.include?(normalize_letter(letter))
       guesses << normalize_letter(letter)
     end
   end
